@@ -1,4 +1,13 @@
 *
+body{
+    box-sizing: border-box;
+    margin: auto;
+    border-radius: 50%;
+    counter-reset: center;
+    background-color: peachpuff;
+    
+    
+}
 .grid{
     display: grid;
     grid-template-columns: repeat(7,55px);
@@ -22,3 +31,18 @@
 .cell:hover{
     background-color:gold;
 }
+ h1{
+     font-family: fantasy;
+     font-style: italic;
+    background: teal;
+    text-align: center;
+ }
+.rest{
+ border: 5ch;
+text-align: center;
+line-height: 3.5;
+padding: 5px;
+color: sold black;
+font-size: 1rem;
+background-color: teal;
+ }
