@@ -8,8 +8,10 @@
 let player ;    // player turn tracking//
 let color ;     // player coloers by swtiching //
 let winner;     //  winnwer player tracking //
-let reset ;      //rest and start again the game//
+let start ;      //rest and start again the game//
 let total = 0;    
+
+// winning Array by each row and culomns //
 
 let grid = [
     [0,1,2,3,4,5,6],

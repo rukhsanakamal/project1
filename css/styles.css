@@ -37,10 +37,10 @@ body{
     background: teal;
     text-align: center;
  }
-.rest{
- border: 5ch;
+.start{
+ border: 3ch;
 text-align: center;
-line-height: 3.5;
+line-height: 2.5;
 padding: 5px;
 color: sold black;
 font-size: 1rem;
