@@ -31,9 +31,10 @@ const startEl = document.querySelector('.start');
 console.log(cell)
 
 /*----- event listeners -----*/    //board is indecating all click functions//
-
+                                   
 board.addEventListener('click', function(e){
     console.log(e.target.id)
+
     let idx=Number(e.target.id)
     let y=idx%7
     let x=Math.floor(idx/7)
@@ -41,7 +42,20 @@ board.addEventListener('click', function(e){
     grid[x][y]='red'
     console.log(grid)
     render(idx)
+    
+    if (e.target.idx ==='DIV' && player){
+        e.target.style.backgroundColor ='red';
+        }else if (e.target.idx === 'DIV' && !player){
+            e.taget.style.backgroundColor ='green';
+        }
+         total++
+
 })
+
+
+
+
+
 startEl.addEventListener('click',function(e){
     console.log(e.target)
 })
@@ -50,5 +64,5 @@ startEl.addEventListener('click',function(e){
 
 function render(idx){
     cell[idx].style.backgroundColor='red'
-    // cell[idx].style
+    // cell[idx].style//
 }
