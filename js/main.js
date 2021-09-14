@@ -31,7 +31,7 @@ const startEl = document.querySelector('.start');
 console.log(cell)
 
 /*----- event listeners -----*/    //board is indecating all click functions//
-                                   
+   // writtting function to check if player is true                                 
 board.addEventListener('click', function(e){
     console.log(e.target.id)
 
@@ -42,7 +42,10 @@ board.addEventListener('click', function(e){
     grid[x][y]='red'
     console.log(grid)
     render(idx)
-    
+    // add one to total//
+    // if total is even then player is true 
+    // iff total is odd then player is false
+    // call my fuction that checks if player is true HERE//
     if (e.target.idx ==='DIV' && player){
         e.target.style.backgroundColor ='red';
         }else if (e.target.idx === 'DIV' && !player){
