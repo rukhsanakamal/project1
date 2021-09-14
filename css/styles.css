@@ -8,7 +8,7 @@ body{
     
     
 }
-.grid{
+.board{
     display: grid;
     grid-template-columns: repeat(7,55px);
     grid-template-rows: repeat(6,55px);

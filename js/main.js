@@ -21,15 +21,16 @@ let grid = [
 ]
 
 /*----- cached element references -----*/
-
-const cell= document.querySelectorAll('cell');
+const board= document.querySelector('.board')
+const cell= document.querySelectorAll('.cell');
 const startEl = document.querySelector('reset-button');
 
-
-
+console.log(cell)
 
 /*----- event listeners -----*/
-
+board.addEventListener('click', function(e){
+    console.log(e.target.id)
+})
 
 
 
