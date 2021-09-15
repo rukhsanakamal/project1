@@ -29,7 +29,6 @@ const board= document.querySelector('.board')
 const cell= document.querySelectorAll('.cell');
 const startEl = document.querySelector('.start');
 
- 
 
 /*----- event listeners -----*/    
    // writtting function to check if player is true    
@@ -42,8 +41,9 @@ function checkPlayerTrun (total){
 }
    
 
-board.addEventListener('click', function(e){           //board is indecating all click functions//
-    console.log(e.target.id)
+board.addEventListener('click', function(e){     //board is indecating all click functions//
+    // console.log(e.target.id)
+
     total = total+1
     let idx=Number(e.target.id)
     let y=idx%7
@@ -56,25 +56,17 @@ board.addEventListener('click', function(e){           //board is indecating all
 
     // add one to total//
     
-    console.log(total)
+    // console.log(total)
     // if total is even then player is true 
     // if total is odd then player is false
-    // call my fuction that checks if player is true HERE//
-
-      
- console.log(player1)
-
-    
-         
+    // call my fuction that checks if player is true HERE//  
+// console.log(player1)        
 
 })
 
 
 startEl.addEventListener('click',function(){
-
-
-
-    // console.log(e.target)
+     
 })
 
 /*----- functions -----*/
