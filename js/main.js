@@ -33,56 +33,61 @@ const startEl = document.querySelector('.start');
 
 /*----- event listeners -----*/    
    // writtting function to check if player is true    
-function checkPlayerTrun (){
+function checkPlayerTrun (total){
     if (total % 2 === 0){ 
-        player = true;
+        return player1 = true;
     }else {        
-        player = false;
+        return player1 = false;
     }
 }
-   player = true
+   
 
 board.addEventListener('click', function(e){           //board is indecating all click functions//
-    // console.log(e.target.id)
-
+    console.log(e.target.id)
+    total = total+1
     let idx=Number(e.target.id)
     let y=idx%7
     let x=Math.floor(idx/7)
-    // console.log(x,y)
+     console.log(x,y)
     grid[x][y]='red'
-    // console.log(grid)
+     console.log(grid)
+     checkPlayerTrun(total)
     render(idx)
 
     // add one to total//
-    total = total+1
     
+    console.log(total)
     // if total is even then player is true 
     // if total is odd then player is false
     // call my fuction that checks if player is true HERE//
 
-     checkPlayerTrun()
- 
+      
+ console.log(player1)
 
-    if (e.target.idx ==='DIV' && player1){
-        e.target.style.backgroundColor ='red';
-    }else if (e.target.idx === 'DIV' && !player2){
-        e.target.style.backgroundColor ='green';
-    }
+    
          
 
 })
 
 
-startEl.addEventListener('click',function(e){
+startEl.addEventListener('click',function(){
 
 
-    
+
     // console.log(e.target)
 })
 
 /*----- functions -----*/
 
 function render(idx){
-    cell[idx].style.backgroundColor='red'
+    console.log(player1, 'inside the render function')
+    if(player1){
+        return cell[idx].style.backgroundColor='red';
+    
+    }else{
+       return cell[idx].style.backgroundColor='green';
+
+    }
+     
     // cell[idx].style//
 }
