@@ -5,10 +5,11 @@
 
 /*----- app's state (variables) -----*/
 
-let player ;    // player turn tracking//
+let player1 ;       //player //
+let player2 ;     // player turn tracking//
 let color ;     // player coloers by swtiching //
 let winner;     //  winnwer player tracking //
-let start ;      //rest and start again the game//
+let start ;      //start the game//
 let total = 0;    
 
 // winning Array by each row and culomns //
@@ -54,7 +55,7 @@ board.addEventListener('click', function(e){           //board is indecating all
 
     // add one to total//
     total = total+1
-    console.log('this is total',total)
+    
     // if total is even then player is true 
     // if total is odd then player is false
     // call my fuction that checks if player is true HERE//
@@ -62,9 +63,9 @@ board.addEventListener('click', function(e){           //board is indecating all
      checkPlayerTrun()
  
 
-    if (e.target.idx ==='DIV' && player){
+    if (e.target.idx ==='DIV' && player1){
         e.target.style.backgroundColor ='red';
-    }else if (e.target.idx === 'DIV' && !player){
+    }else if (e.target.idx === 'DIV' && !player2){
         e.target.style.backgroundColor ='green';
     }
          
@@ -73,6 +74,9 @@ board.addEventListener('click', function(e){           //board is indecating all
 
 
 startEl.addEventListener('click',function(e){
+
+
+    
     // console.log(e.target)
 })
 
