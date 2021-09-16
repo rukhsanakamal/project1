@@ -48,9 +48,9 @@ board.addEventListener('click', function(e){     //board is indecating all click
     let idx=Number(e.target.id)
     let y=idx%7
     let x=Math.floor(idx/7)
-     console.log(x,y)
+    //  console.log(x,y)
     grid[x][y]='red'
-     console.log(grid)
+    //  console.log(grid)
 
      checkWin()
 
@@ -71,7 +71,7 @@ board.addEventListener('click', function(e){     //board is indecating all click
 /*----- functions -----*/
 
 function render(idx){
-    console.log(player1, 'inside the render function')
+    // console.log(player1, 'inside the render function')
     if(player1){
         return cell[idx].style.backgroundColor='red';
     
@@ -157,11 +157,11 @@ let winCondition = [
     [12, 19, 26, 33],
     [13, 20, 27, 34],
   ]
-console.log(winCondition.length)
+// console.log(winCondition.length)
     function checkWin(){
         for (let i = 0; i < winCondition.length; i++){
             for (let j = 0; j < 1; j++){
-                console.log(i,j)
+                // console.log(i,j)
                 if (document.getElementById(`${winCondition[i][j]}`).style.backgroundColor != ''){
                     let a = document.getElementById(`${winCondition[i][j]}`).style.backgroundColor
                     let b = document.getElementById(`${winCondition[i][j + 1]}`).style.backgroundColor
@@ -169,7 +169,7 @@ console.log(winCondition.length)
                     let d = document.getElementById(`${winCondition[i][j + 3]}`).style.backgroundColor
     
                     if (a == b && b == c && c == d){
-                        console.log("winner")
+                        // console.log("winner")
                         results.innerHTML = 'Player wins'
                     }
                 }

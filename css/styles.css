@@ -37,3 +37,9 @@ body{
     background: teal;
     text-align: center;
  }
+ .button {
+     background-color: peachpuff;
+     color: black;
+     border: 2px solid black;
+     
+ }
