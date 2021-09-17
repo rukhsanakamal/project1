@@ -29,6 +29,7 @@ let grid = [
 
 const board= document.querySelector('.board') 
 const cell= document.querySelectorAll('.cell');
+const result= document.querySelector('#result')
 
 /*----- event listeners -----*/    
    // writtting function to check if player is true    
@@ -40,8 +41,8 @@ function checkPlayerTrun (total){
     }
 }
    
-
 board.addEventListener('click', function(e){     //board is indecating all click functions//
+   
     // console.log(e.target.id)
 
     total = total+1
@@ -96,7 +97,6 @@ let winCondition = [
     [13, 12, 11, 10],
     [35, 36, 37, 38],
     [6, 5, 4, 3],
-
     [0, 7, 14, 21],
     [41, 34, 27, 20],
     [1, 8, 15, 22],
@@ -111,7 +111,6 @@ let winCondition = [
     [36, 29, 22, 15],
     [6, 13, 20, 27],
     [35, 28, 21, 14],
-
     [0, 8, 16, 24],
     [41, 33, 25, 17],
     [7, 15, 23, 31],
@@ -136,7 +135,6 @@ let winCondition = [
     [8, 16, 24, 32],
     [11, 17, 23, 29],
     [12, 18, 24, 30],
-    
     [1, 2, 3, 4],
     [5, 4, 3, 2],
     [8, 9, 10, 11],
@@ -159,9 +157,9 @@ let winCondition = [
   ]
 //  console.log(winCondition.length)
     function checkWin(){
-        for (let i = 0; i < winCondition.length; i++){
+        for (let i = 0; i < winCondition.length; i++){   //for every arrey inside of the winn codition arrey 
             // console.log(i,"i am here")
-            for (let j = 0; j < 1; j++){
+            for (let j = 0; j < 1; j++){             //every element inside of the arrey checking
                 //  console.log(i,j)
                  if (document.getElementById(`${winCondition[i][j]}`).style.backgroundColor != ''){
                      let a = document.getElementById(`${winCondition[i][j]}`).style.backgroundColor
@@ -171,12 +169,10 @@ let winCondition = [
     
                      if (a == b && b == c && c == d){
                         //  console.log("winner")
-                         results.innerHTML = 'Player wins'
-                     }
+                          result.innerHTML = (player1)? 'Player 1 WINS!' : 'Player 2 Wins!!!!!!'
                  }
-                
+                                           //ternary oprater which indacate the player 
             }
         }
     }
-
-
+  }
