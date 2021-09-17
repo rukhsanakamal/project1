@@ -29,6 +29,7 @@ let grid = [
 
 const board= document.querySelector('.board') 
 const cell= document.querySelectorAll('.cell');
+const result= document.querySelector('#result')
 
 /*----- event listeners -----*/    
    // writtting function to check if player is true    
@@ -40,17 +41,17 @@ function checkPlayerTrun (total){
     }
 }
    
-
 board.addEventListener('click', function(e){     //board is indecating all click functions//
+   
     // console.log(e.target.id)
 
     total = total+1
     let idx=Number(e.target.id)
     let y=idx%7
     let x=Math.floor(idx/7)
-     console.log(x,y)
+    //  console.log(x,y)
     grid[x][y]='red'
-     console.log(grid)
+    //  console.log(grid)
 
      checkWin()
 
@@ -71,7 +72,7 @@ board.addEventListener('click', function(e){     //board is indecating all click
 /*----- functions -----*/
 
 function render(idx){
-    console.log(player1, 'inside the render function')
+    // console.log(player1, 'inside the render function')
     if(player1){
         return cell[idx].style.backgroundColor='red';
     
@@ -79,7 +80,7 @@ function render(idx){
        return cell[idx].style.backgroundColor='green';
 
     } 
-    // cell[idx].style//
+    //cell[idx].style//
 }
 
 // find the winner // 
@@ -96,7 +97,6 @@ let winCondition = [
     [13, 12, 11, 10],
     [35, 36, 37, 38],
     [6, 5, 4, 3],
-
     [0, 7, 14, 21],
     [41, 34, 27, 20],
     [1, 8, 15, 22],
@@ -111,7 +111,6 @@ let winCondition = [
     [36, 29, 22, 15],
     [6, 13, 20, 27],
     [35, 28, 21, 14],
-
     [0, 8, 16, 24],
     [41, 33, 25, 17],
     [7, 15, 23, 31],
@@ -136,7 +135,6 @@ let winCondition = [
     [8, 16, 24, 32],
     [11, 17, 23, 29],
     [12, 18, 24, 30],
-    
     [1, 2, 3, 4],
     [5, 4, 3, 2],
     [8, 9, 10, 11],
@@ -157,27 +155,24 @@ let winCondition = [
     [12, 19, 26, 33],
     [13, 20, 27, 34],
   ]
-console.log(winCondition.length)
+//  console.log(winCondition.length)
     function checkWin(){
-        for (let i = 0; i < winCondition.length; i++){
-            for (let j = 0; j < 1; j++){
-                console.log(i,j)
-                if (document.getElementById(`${winCondition[i][j]}`).style.backgroundColor != ''){
-                    let a = document.getElementById(`${winCondition[i][j]}`).style.backgroundColor
-                    let b = document.getElementById(`${winCondition[i][j + 1]}`).style.backgroundColor
-                    let c = document.getElementById(`${winCondition[i][j + 2]}`).style.backgroundColor
-                    let d = document.getElementById(`${winCondition[i][j + 3]}`).style.backgroundColor
+        for (let i = 0; i < winCondition.length; i++){   //for every arrey inside of the winn codition arrey 
+            // console.log(i,"i am here")
+            for (let j = 0; j < 1; j++){             //every element inside of the arrey checking
+                //  console.log(i,j)
+                 if (document.getElementById(`${winCondition[i][j]}`).style.backgroundColor != ''){
+                     let a = document.getElementById(`${winCondition[i][j]}`).style.backgroundColor
+                     let b = document.getElementById(`${winCondition[i][j + 1]}`).style.backgroundColor
+                     let c = document.getElementById(`${winCondition[i][j + 2]}`).style.backgroundColor
+                     let d = document.getElementById(`${winCondition[i][j + 3]}`).style.backgroundColor
     
-                    if (a == b && b == c && c == d){
-                        console.log("winner")
-                        results.innerHTML = 'Player wins'
-                    }
-                }
+                     if (a == b && b == c && c == d){
+                        //  console.log("winner")
+                          result.innerHTML = (player1)? 'Player 1 WINS!' : 'Player 2 Wins!'
+                 }
+                                           //ternary oprater which indacate the player 
             }
         }
     }
-
-
-
-    
-    
+  }
