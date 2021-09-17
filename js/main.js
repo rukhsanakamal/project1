@@ -157,27 +157,26 @@ let winCondition = [
     [12, 19, 26, 33],
     [13, 20, 27, 34],
   ]
-// console.log(winCondition.length)
+//  console.log(winCondition.length)
     function checkWin(){
         for (let i = 0; i < winCondition.length; i++){
+            // console.log(i,"i am here")
             for (let j = 0; j < 1; j++){
-                // console.log(i,j)
-                if (document.getElementById(`${winCondition[i][j]}`).style.backgroundColor != ''){
-                    let a = document.getElementById(`${winCondition[i][j]}`).style.backgroundColor
-                    let b = document.getElementById(`${winCondition[i][j + 1]}`).style.backgroundColor
-                    let c = document.getElementById(`${winCondition[i][j + 2]}`).style.backgroundColor
-                    let d = document.getElementById(`${winCondition[i][j + 3]}`).style.backgroundColor
+                //  console.log(i,j)
+                 if (document.getElementById(`${winCondition[i][j]}`).style.backgroundColor != ''){
+                     let a = document.getElementById(`${winCondition[i][j]}`).style.backgroundColor
+                     let b = document.getElementById(`${winCondition[i][j + 1]}`).style.backgroundColor
+                     let c = document.getElementById(`${winCondition[i][j + 2]}`).style.backgroundColor
+                     let d = document.getElementById(`${winCondition[i][j + 3]}`).style.backgroundColor
     
-                    if (a == b && b == c && c == d){
-                        // console.log("winner")
-                        results.innerHTML = 'Player wins'
-                    }
-                }
+                     if (a == b && b == c && c == d){
+                        //  console.log("winner")
+                         results.innerHTML = 'Player wins'
+                     }
+                 }
+                
             }
         }
     }
 
 
-
-    
-    
