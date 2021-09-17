@@ -80,7 +80,7 @@ function render(idx){
        return cell[idx].style.backgroundColor='green';
 
     } 
-    // cell[idx].style//
+    //cell[idx].style//
 }
 
 // find the winner // 
@@ -169,7 +169,7 @@ let winCondition = [
     
                      if (a == b && b == c && c == d){
                         //  console.log("winner")
-                          result.innerHTML = (player1)? 'Player 1 WINS!' : 'Player 2 Wins!!!!!!'
+                          result.innerHTML = (player1)? 'Player 1 WINS!' : 'Player 2 Wins!'
                  }
                                            //ternary oprater which indacate the player 
             }
