@@ -21,3 +21,10 @@ JavaScript , HTML, CSS.
 5. Refresh page and start game again. 
 
 
+## Wireframe 
+
+![IMG-4485](https://user-images.githubusercontent.com/87918358/133955411-539cf5f4-2877-4af6-8c4d-e4bfe6fd3cc9.jpg)
+ 
+ ![IMG-4486](https://user-images.githubusercontent.com/87918358/133955539-de29ead7-4654-4866-acae-1932b0530826.jpg)
+
+https://rukhsanakamal.github.io/project1
